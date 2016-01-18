@@ -176,37 +176,6 @@ def toArray(transformedData,w,h):
         
         plt.imshow(imarr[ind]) #Needs to be in row,col order
         plt.savefig("training\\eigFace"+str(ind))
-                
-                
-            
-                  
-                    
-       
-
-'''  
-          
-mat = [[0 for x in range(10)] for x in range(2)] 
-            
-a=[2.5,0.5,2.2,1.9,3.1,2.3,2,1,1.5,1.1]
-b=[2.4,0.7,2.9,2.2,3.0,2.7,1.6,1.1,1.6,0.9]
-
-
-mat[0]=a
-mat[1]=b
-
-_subtrTheMean(mat)
-cov=_calcCovarianceMatric(mat)
-
-
-
-
-FeatureVector=_selecFeatureVector(eigVector,1)
-RowFeatureVector=np.transpose(FeatureVector)
-
-transformedData=np.dot(RowFeatureVector,mat)
-'''
-
-
 imRowMat =getRowImageMatrix("Images")
 Mat=doPCA(imRowMat, 3)
 toArray(Mat,32,32)
